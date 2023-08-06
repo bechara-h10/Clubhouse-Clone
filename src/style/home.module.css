@@ -1,0 +1,50 @@
+.homeContainer {
+  overflow: auto;
+  padding: 3.5em 1em;
+  height: 100vh;
+}
+
+.homeContainer + .actionButton button {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+}
+
+.homeContainer + .actionButton button svg {
+  font-size: 1.3em;
+}
+
+.homeContainer + .actionButton {
+  display: flex;
+  align-items: center;
+  padding: 4em 1.5em 2em 1.5em;
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(transparent 20% #e7e4d5);
+}
+
+.homeContainer + .actionButton > button:first-child {
+  border-radius: 2em;
+  font-size: 1.1em;
+  background-color: #28ae61;
+  padding: 0.3em 1em;
+  color: #fff;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.homeContainer + .actionButton > button:nth-child(2) {
+  line-height: 1;
+}
+
+.homeContainer + .actionButton > button:nth-child(2) svg {
+  color: var(--text-color);
+}

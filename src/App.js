@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AllowNotification from "./pages/AllowNotification";
+import CodeConfirm from "./pages/CodeConfirm";
+import AppLayout from "./pages/Layouts/AppLayout";
+import PlanLayout from "./pages/Layouts/PlanLayout";
+import PhoneConfirmation from "./pages/PhoneConfirmation";
+import Welcome from "./pages/Welcome";
+import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <PlanLayout>
+        <Routes>
+          <Route exact path="/" element={<Welcome />}></Route>
+          <Route exact path="/invite" element={<PhoneConfirmation />} />
+          <Route exact path="/code_confirm" element={<CodeConfirm />} />
+          <Route
+            exact
+            path="/allow_notification"
+            element={<AllowNotification />}
+          />
+        </Routes>
+      </PlanLayout>
+      <AppLayout>
+        <Routes>
+          <Route exact path="/home" element={<Home />}></Route>
+        </Routes>
+      </AppLayout>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,46 @@
+.roomDetailContainer {
+  height: 100%;
+  background-color: #f2f0e4;
+  margin: -1.5em -1em;
+}
+
+.roomDetailContainer .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8em 0.5em 1.5em 0.5em;
+}
+
+.head .arrowIcon {
+  width: 15px;
+  transform: rotate(-90deg);
+  margin-top: -0.5em;
+}
+
+.head .profileImg {
+  width: 25px;
+  border-radius: 0.8em;
+  margin-left: 1.2em;
+}
+
+.head span {
+  font-size: 1em;
+  margin-left: 0.5em;
+}
+
+.head svg {
+  font-size: 1.4em;
+}
+
+.roomDetailCard {
+  background-color: #fff;
+  padding: 1em 1em 3em 1em;
+  border-radius: 1.5em 1.5em 0 0;
+  height: 90vh;
+  overflow: auto;
+}
+
+.roomDetailCard img {
+  width: 70px;
+  border-radius: 1.7em;
+}
